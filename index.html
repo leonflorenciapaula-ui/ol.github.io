@@ -10,7 +10,7 @@
   <meta name="keywords" content="diseño gráfico, branding, edición de reels, diseño para redes, diseño cafeterías, diseño restaurantes, feed de instagram, papelería, identidad visual, agencia creativa, Otro Lado Studio, diseño para emprendimientos, otro lado studio">
 
   <!-- Favicon -->
-  <link rel="icon" type="LOGOTRANSPARENTE.png" href="LOGOTRANSPARENTE.png">
+  <link rel="icon" type="image/png" href="LOGOTRANSPARENTE.png">
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
       --verde: #0FF87A;
       --azul: #6C1EFF;
       --rosa: #FF3E8E;
-      --verde-oscuro: #128C7E; /* verde más oscuro para botones */
+      --verde-oscuro: #128C7E;
     }
 
     body {
@@ -46,17 +46,19 @@
     .hero {
       background: linear-gradient(180deg, var(--verde), var(--azul));
       text-align: center;
-      padding: 100px 20px;
+      padding: 60px 20px;
       color: white;
     }
 
     .logo {
-      width: 300px; /* aumentado de 120px */
+      width: 70%;
+      max-width: 300px;
+      height: auto;
       margin-bottom: 10px;
     }
 
     .section {
-      padding: 80px 0;
+      padding: 50px 20px;
     }
 
     .btn-custom {
@@ -109,11 +111,11 @@
     }
 
     .icon-service {
-      width: 40px;
+      width: 50px;
+      height: 50px;
       margin-bottom: 10px;
     }
 
-    /* Botón de contacto WhatsApp final más pequeño */
     .btn-whatsapp-final {
       display: inline-block;
       font-size: 14px;
@@ -129,6 +131,34 @@
     .btn-whatsapp-final:hover {
       background-color: #0B5E4C;
     }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .btn-custom, .btn-whatsapp, .btn-whatsapp-final {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .color-circle {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    /* Paleta flex */
+    .paleta-colores {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
   </style>
 </head>
 
@@ -142,41 +172,37 @@
     <a href="#servicios" class="btn btn-custom mt-4">Ver servicios</a>
   </section>
 
-<!-- Servicios -->
+  <!-- Servicios -->
   <section id="servicios" class="section text-center">
     <div class="container">
       <h2>Servicios</h2>
       <div class="row mt-5">
-        <div class="col-md-4">
-          <!-- Ícono Edición de Reels -->
+        <div class="col-md-4 mb-4">
           <svg class="icon-service" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M4 4h16v16H4z" stroke="white" stroke-width="2" fill="none"/>
             <path d="M10 8l6 4-6 4V8z" fill="white"/>
           </svg>
-          <img src="reels.png" alt="Edición de reels para redes" class="img-fluid rounded mb-3">
           <h3>Edición de Reels</h3>
           <p>Editamos el contenido de tu negocio para destacar en redes sociales.</p>
           <a href="https://wa.me/1166159367?text=Hola,%20quiero%20edici%C3%B3n%20de%20Reels%20para%20mi%20negocio" class="btn-whatsapp">Quiero edición de Reels</a>
         </div>
-        <div class="col-md-4">
-          <!-- Ícono Diseño de Feed -->
+
+        <div class="col-md-4 mb-4">
           <svg class="icon-service" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <rect x="3" y="3" width="18" height="18" stroke="white" stroke-width="2" fill="none"/>
             <circle cx="8" cy="8" r="2" fill="white"/>
             <path d="M3 15h18v2H3z" fill="white"/>
           </svg>
-          <img src="feed.png" alt="Diseño de feed para cafeterías" class="img-fluid rounded mb-3">
           <h3>Diseño de Feed</h3>
           <p>Diseñamos la estética de tu Instagram para cafeterías y emprendimientos.</p>
           <a href="https://wa.me/1166159367?text=Hola,%20quiero%20dise%C3%B1o%20de%20Feed%20para%20mi%20negocio" class="btn-whatsapp">Quiero diseño de Feed</a>
         </div>
-        <div class="col-md-4">
-          <!-- Ícono Branding & Papelería -->
+
+        <div class="col-md-4 mb-4">
           <svg class="icon-service" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <rect x="3" y="3" width="18" height="18" stroke="white" stroke-width="2" fill="none"/>
             <path d="M3 7h18M3 12h18M3 17h18" stroke="white" stroke-width="2"/>
           </svg>
-          <img src="branding.png" alt="Branding y papelería visual" class="img-fluid rounded mb-3">
           <h3>Branding & Papelería</h3>
           <p>Desarrollamos una identidad visual única que represente tu marca.</p>
           <a href="https://wa.me/1166159367?text=Hola,%20quiero%20Branding%20y%20Papeler%C3%ADa%20para%20mi%20negocio" class="btn-whatsapp">Quiero Branding & Papelería</a>
@@ -190,7 +216,7 @@
     <div class="container">
       <h2>Estilo visual</h2>
       <p class="mt-3">Inspirado en el color y la autenticidad.</p>
-      <div class="mt-4">
+      <div class="paleta-colores">
         <span class="color-circle" style="background-color:#0FF87A;"></span>
         <span class="color-circle" style="background-color:#6C1EFF;"></span>
         <span class="color-circle" style="background-color:#FF3E8E;"></span>
@@ -203,8 +229,7 @@
     <div class="container">
       <h2>¿Querés llevar tu marca al otro lado?</h2>
       <p class="mt-3">Escribinos y trabajemos juntos.</p>
-      <a href="https://wa.me/1166159367?text=Hola,%20quiero%20contactar%20Otro%20Lado%20Studio "class="btn btn-custom mt-3">Contactar</a>
-     
+      <a href="https://wa.me/1166159367?text=Hola,%20quiero%20contactar%20Otro%20Lado%20Studio" class="btn btn-custom mt-3">Contactar</a>
     </div>
   </section>
 
