@@ -48,6 +48,7 @@
       text-align: center;
       padding: 60px 20px;
       color: white;
+      width: 100%;
     }
 
     .logo {
@@ -134,30 +135,28 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      .btn-custom, .btn-whatsapp, .btn-whatsapp-final {
-        width: 100%;
-        padding: 12px 0;
-        font-size: 16px;
-      }
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      .color-circle {
-        width: 50px;
-        height: 50px;
-      }
-    }
+  .hero h1 {
+    font-size: 1.6rem; /* reducir tamaño del título */
+    line-height: 1.2;  /* que las líneas estén más pegadas */
+  }
+  .hero p {
+    font-size: 0.95rem; /* texto del párrafo más pequeño */
+  }
+  .hero .btn-custom {
+    padding: 12px 20px; /* botón más pequeño y que no se corte */
+    font-size: 14px;
+  }
+  .hero h1 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.hero {
+  padding: 50px 20px;
+}
 
-    /* Paleta flex */
-    .paleta-colores {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+
+}
+
 
   </style>
 </head>
